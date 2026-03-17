@@ -1,0 +1,367 @@
+{
+  "clients": [
+    {
+      "id": "1001",
+      "name": "Anthony Laverde",
+      "email": "anthony@example.com",
+      "address": "123 Business St, Tech City"
+    },
+    {
+      "id": "1002",
+      "name": "Sarah Smith",
+      "email": "sarah@example.com",
+      "address": "456 Commerce Ave, Finance District"
+    },
+    {
+      "id": "1003",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "address": "789 Main St, Springfield"
+    },
+    {
+      "id": "1004",
+      "name": "Jane Wilson",
+      "email": "jane.wilson@example.com",
+      "address": "321 Oak Rd, Oakville"
+    },
+    {
+      "id": "1005",
+      "name": "Michael Brown",
+      "email": "michael.brown@example.com",
+      "address": "555 Pine Ln, Pinewood"
+    },
+    {
+      "id": "1006",
+      "name": "Emily Davis",
+      "email": "emily.davis@example.com",
+      "address": "888 Cedar Dr, Cedarburg"
+    },
+    {
+      "id": "1007",
+      "name": "Robert Johnson",
+      "email": "robert.johnson@example.com",
+      "address": "222 Maple St, Mapleton"
+    },
+    {
+      "id": "1008",
+      "name": "Linda Martinez",
+      "email": "linda.martinez@example.com",
+      "address": "444 Birch Blvd, Birchfield"
+    },
+    {
+      "id": "1009",
+      "name": "William Garcia",
+      "email": "william.garcia@example.com",
+      "address": "666 Elm St, Elmwood"
+    },
+    {
+      "id": "1010",
+      "name": "Barbara Miller",
+      "email": "barbara.miller@example.com",
+      "address": "777 Walnut Ave, Walnut Creek"
+    },
+    {
+      "id": "1011",
+      "name": "David Taylor",
+      "email": "david.taylor@example.com",
+      "address": "999 Spruce Rd, Spruceville"
+    },
+    {
+      "id": "1012",
+      "name": "Susan Anderson",
+      "email": "susan.anderson@example.com",
+      "address": "111 Aspen Ln, Aspen"
+    },
+    {
+      "id": "1013",
+      "name": "James Thomas",
+      "email": "james.thomas@example.com",
+      "address": "333 Willow Way, Willowbrook"
+    },
+    {
+      "id": "1014",
+      "name": "Jessica Hernandez",
+      "email": "jessica.hernandez@example.com",
+      "address": "555 Juniper St, Juniper"
+    },
+    {
+      "id": "1015",
+      "name": "Charles Moore",
+      "email": "charles.moore@example.com",
+      "address": "777 Poplar Dr, Poplarville"
+    },
+    {
+      "id": "1016",
+      "name": "Karen Martin",
+      "email": "karen.martin@example.com",
+      "address": "999 Hickory Rd, Hickory"
+    },
+    {
+      "id": "1017",
+      "name": "Christopher Lee",
+      "email": "christopher.lee@example.com",
+      "address": "123 Alder St, Alderwood"
+    },
+    {
+      "id": "1018",
+      "name": "Nancy Thompson",
+      "email": "nancy.thompson@example.com",
+      "address": "456 Magnolia Ave, Magnolia"
+    },
+    {
+      "id": "1019",
+      "name": "Matthew White",
+      "email": "matthew.white@example.com",
+      "address": "789 Sycamore Rd, Sycamore"
+    },
+    {
+      "id": "1020",
+      "name": "Elizabeth Clark",
+      "email": "elizabeth.clark@example.com",
+      "address": "321 Redwood Dr, Redwood City"
+    }
+  ],
+  "documents": [
+    {
+      "id": "DOC-001",
+      "clientId": "1001",
+      "service": "Internet",
+      "period": "2024-01",
+      "amount": 120.5,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-002",
+      "clientId": "1001",
+      "service": "Electricity",
+      "period": "2024-01",
+      "amount": 85,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-003",
+      "clientId": "1001",
+      "service": "Water",
+      "period": "2024-01",
+      "amount": 45.2,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-004",
+      "clientId": "1001",
+      "service": "Internet",
+      "period": "2024-02",
+      "amount": 120.5,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-005",
+      "clientId": "1002",
+      "service": "Electricity",
+      "period": "2024-01",
+      "amount": 92.4,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-006",
+      "clientId": "1002",
+      "service": "Gas",
+      "period": "2024-01",
+      "amount": 60,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-007",
+      "clientId": "1003",
+      "service": "Water",
+      "period": "2024-01",
+      "amount": 42.1,
+      "status": "Pending"
+    },
+    {
+      "id": "DOC-008",
+      "clientId": "1003",
+      "service": "Internet",
+      "period": "2024-02",
+      "amount": 125,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-009",
+      "clientId": "1004",
+      "service": "Gas",
+      "period": "2024-02",
+      "amount": 55,
+      "status": "Pending"
+    },
+    {
+      "id": "DOC-010",
+      "clientId": "1004",
+      "service": "Water",
+      "period": "2024-02",
+      "amount": 48,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-011",
+      "clientId": "1005",
+      "service": "Internet",
+      "period": "2024-01",
+      "amount": 110,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-012",
+      "clientId": "1005",
+      "service": "Electricity",
+      "period": "2024-01",
+      "amount": 95,
+      "status": "Pending"
+    },
+    {
+      "id": "DOC-013",
+      "clientId": "1006",
+      "service": "Water",
+      "period": "2024-01",
+      "amount": 50,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-014",
+      "clientId": "1006",
+      "service": "Gas",
+      "period": "2024-02",
+      "amount": 65,
+      "status": "Pending"
+    },
+    {
+      "id": "DOC-015",
+      "clientId": "1007",
+      "service": "Internet",
+      "period": "2024-01",
+      "amount": 130,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-016",
+      "clientId": "1008",
+      "service": "Electricity",
+      "period": "2024-02",
+      "amount": 88,
+      "status": "Pending"
+    },
+    {
+      "id": "DOC-017",
+      "clientId": "1009",
+      "service": "Water",
+      "period": "2024-01",
+      "amount": 44,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-018",
+      "clientId": "1010",
+      "service": "Gas",
+      "period": "2024-03",
+      "amount": 70,
+      "status": "Pending"
+    },
+    {
+      "id": "DOC-019",
+      "clientId": "1011",
+      "service": "Internet",
+      "period": "2024-02",
+      "amount": 115,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-020",
+      "clientId": "1012",
+      "service": "Electricity",
+      "period": "2024-01",
+      "amount": 100,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-021",
+      "clientId": "1013",
+      "service": "Water",
+      "period": "2024-02",
+      "amount": 55,
+      "status": "Pending"
+    },
+    {
+      "id": "DOC-022",
+      "clientId": "1014",
+      "service": "Gas",
+      "period": "2024-01",
+      "amount": 62,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-023",
+      "clientId": "1015",
+      "service": "Internet",
+      "period": "2024-01",
+      "amount": 120,
+      "status": "Pending"
+    },
+    {
+      "id": "DOC-024",
+      "clientId": "1016",
+      "service": "Electricity",
+      "period": "2024-02",
+      "amount": 92,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-025",
+      "clientId": "1017",
+      "service": "Water",
+      "period": "2024-03",
+      "amount": 48,
+      "status": "Pending"
+    },
+    {
+      "id": "DOC-026",
+      "clientId": "1018",
+      "service": "Gas",
+      "period": "2024-01",
+      "amount": 58,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-027",
+      "clientId": "1019",
+      "service": "Internet",
+      "period": "2024-02",
+      "amount": 125,
+      "status": "Pending"
+    },
+    {
+      "id": "DOC-028",
+      "clientId": "1020",
+      "service": "Electricity",
+      "period": "2024-01",
+      "amount": 85,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-029",
+      "clientId": "1001",
+      "service": "Gas",
+      "period": "2024-03",
+      "amount": 66,
+      "status": "Paid"
+    },
+    {
+      "id": "DOC-030",
+      "clientId": "1002",
+      "service": "Water",
+      "period": "2024-02",
+      "amount": 47,
+      "status": "Paid"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
