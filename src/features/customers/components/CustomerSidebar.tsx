@@ -1,8 +1,8 @@
-// src/features/customers/components/CustomerSidebar.tsx
 import { useNavigate } from 'react-router-dom';
 import { CustomerProfile } from './CustomerProfile';
 import type { Client } from '../domain/Client';
 import { useState } from 'react';
+import { Button } from '../../../components/ui/Button';
 
 interface Props {
   client: Client | null;
@@ -14,17 +14,18 @@ export const CustomerSidebar = ({ client }: Props) => {
 
   return (
     <>
-      {/* Mobile Sticky Header */}
       <div className="lg:hidden sticky top-16 z-30 w-full bg-slate-50 border-b border-slate-200 px-4 py-3 flex items-center justify-between">
-        <button 
+        <Button 
+          variant="ghost" 
+          size="sm" 
           onClick={() => navigate('/search')}
-          className="flex items-center text-[10px] font-bold text-slate-500 uppercase tracking-widest"
+          className="text-slate-500"
         >
           <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
           </svg>
           Volver
-        </button>
+        </Button>
         
         <div className="flex items-center gap-3">
           <span className="text-[11px] font-bold text-slate-900 uppercase truncate max-w-[150px]">
@@ -41,7 +42,6 @@ export const CustomerSidebar = ({ client }: Props) => {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
       {isDrawerOpen && (
         <div className="lg:hidden fixed inset-0 z-[60]">
           <div 
@@ -64,12 +64,13 @@ export const CustomerSidebar = ({ client }: Props) => {
         </div>
       )}
 
-      {/* Desktop Sidebar (Hidden on Mobile) */}
       <aside className="hidden lg:block w-80 bg-slate-50 border-r border-slate-200 p-8 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
         <div className="space-y-12">
-          <button 
+          <Button 
+            variant="ghost" 
+            size="sm" 
             onClick={() => navigate('/search')}
-            className="group flex items-center text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] hover:text-slate-900 transition-all duration-300"
+            className="group text-slate-400 hover:text-slate-900 px-0"
           >
             <div className="flex items-center justify-center w-6 h-6 rounded-full border border-slate-200 mr-3 group-hover:border-slate-900 transition-colors">
               <svg className="w-2.5 h-2.5 transform group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -77,7 +78,7 @@ export const CustomerSidebar = ({ client }: Props) => {
               </svg>
             </div>
             Volver a Búsqueda
-          </button>
+          </Button>
 
           {client ? (
             <CustomerProfile client={client} />

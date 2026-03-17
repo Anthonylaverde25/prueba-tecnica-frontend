@@ -1,75 +1,65 @@
-# React + TypeScript + Vite
+## GEMINI.MD:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Como se indicó en el correo, se me permite emplear herramientas basadas en IA, como los agentes de desarrollo. De esta manera, apuesto por la idea del avance de la tecnología en nuestro campo, sin desentenderme del correcto funcionamiento del código del cual soy autor.
 
-Currently, two official plugins are available:
+En este proyecto definí estándares de diseño y conducta en el fichero GEMINI.md, con el objetivo de optimizar el tiempo de desarrollo y mejorar la calidad del código.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack de Tecnologías
 
-## React Compiler
+- **React 19**: Biblioteca para la interfaz de usuario.
+- **TypeScript**: Tipado estático para mayor robustez.
+- **Vite**: Herramienta de construcción rápida.
+- **Tailwind CSS**: Framework de utilidades CSS.
+- **JSON Server**: API Mock para el desarrollo y pruebas.
+- **React Router Dom 7**: Gestión avanzada de navegación.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## Instrucciones de Arranque
 
-## Expanding the ESLint configuration
+Para que la aplicación funcione correctamente, deben estar corriendo simultáneamente el **servidor de datos** y el **frontend**.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 1. Instalación
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Iniciar API (Mock)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Inicia el servidor en `http://localhost:3001`:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run mock-server
 ```
+
+### 3. Iniciar Aplicación
+Inicia Vite en modo desarrollo (usualmente en `http://localhost:5173`):
+```bash
+npm run dev
+```
+
+---
+
+## 🔍 Criterios de Búsqueda
+
+Para consultar el estado de cuenta de un cliente, la aplicación permite realizar búsquedas utilizando los siguientes parámetros:
+
+- **ID de Cliente**: Identificador numérico único (ej. `1001`, `1005`).
+- **Correo Electrónico**: Dirección de email asociada a la cuenta (ej. `anthony@example.com`, `sarah@example.com`).
+
+Los datos de prueba están disponibles en el archivo `db.json`.
+
+---
+
+## Scripts Útiles
+
+- `npm run build`: Compila para producción.
+- `npm run lint`: Ejecuta el análisis de calidad de código.
+- `npm run preview`: Previsualiza la build de producción localmente.
+
+---
+
+### Persistencia Mock
+
+- Se emplea `JSON Server` para emular una API real mediante peticiones `PATCH`. Los cambios en el estado de las facturas (ej. de "Pending" a "Paid") persisten físicamente en la base de datos mock.

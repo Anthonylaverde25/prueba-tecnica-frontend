@@ -1,8 +1,8 @@
 // src/App.tsx
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { CustomerSearchPage } from './features/customers/pages/CustomerSearchPage';
-import { CustomerResultsPage } from './features/customers/pages/CustomerResultsPage';
-import { NotificationProvider } from './core/contexts/NotificationContext';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { CustomerSearchPage } from "./features/customers/pages/CustomerSearchPage";
+import { CustomerResultsPage } from "./features/customers/pages/CustomerResultsPage";
+import { NotificationProvider } from "./core/contexts/NotificationContext";
 
 function App() {
   return (
@@ -13,12 +13,11 @@ function App() {
             <div className="px-8 h-full flex items-center justify-between w-full">
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-slate-900 flex items-center justify-center">
-                  <span className="text-white font-black text-sm">N</span>
+                  <span className="text-white font-black text-sm">P</span>
                 </div>
-                <span className="text-sm font-black tracking-[0.2em] text-slate-900 uppercase">Nexus <span className="text-blue-600">ERP</span></span>
-              </div>
-              <div className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em]">
-                Cloud Infrastructure v2.4
+                <span className="text-sm font-black tracking-[0.2em] text-slate-900 uppercase">
+                  Prueba <span className="text-blue-600">Técnica</span>
+                </span>
               </div>
             </div>
           </nav>
@@ -26,7 +25,10 @@ function App() {
           <main className="flex-1 w-full overflow-hidden">
             <Routes>
               <Route path="/search" element={<CustomerSearchPage />} />
-              <Route path="/results/:customerId" element={<CustomerResultsPage />} />
+              <Route
+                path="/results/:customerId"
+                element={<CustomerResultsPage />}
+              />
               <Route path="/" element={<Navigate to="/search" replace />} />
               <Route path="*" element={<Navigate to="/search" replace />} />
             </Routes>
